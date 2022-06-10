@@ -1,4 +1,4 @@
-these script allows transforming dextorm yaml files in command line argements and vice-versa
+these scripts allows transforming dextorm yaml files in command line argements and vice-versa
 
 ```bash
 $ ./to_cli.py dextorm.yaml 
