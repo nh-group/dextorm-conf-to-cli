@@ -1,0 +1,36 @@
+app:
+  instrumentedPackage: "fr.pantheonsorbonne"
+  sourceRootDir: src/main/java
+  publisher: console1
+  issueCollector: basic-cli-uni
+  diffAlgorithm: g
+differs:
+  g:
+    diffAlgorithm: GUMTREE
+    methods: false
+    instructions: true
+  b:
+    diffAlgorithm: BLAME
+    methods: false
+    instructions: true
+issueCollectors:
+  github:
+    basic-cli-uni:
+      gitHubRepoName: nh-group/basic-cli-uni
+      branch: master
+    dummy:
+      gitHubRepoName: nherbaut/dextorm-dummy-project
+      repoAddress: file:///home/nherbaut/tmp/dextorm-dummy-project.git
+      branch: master
+
+publishers:
+  grpcPublishers:
+    grpc1:
+      host: localhost
+      port: 8081
+  filePublishers:
+    console1:
+      filePath: stdout
+  restPublishers:
+    rest1:
+      baseUrl: http://localhost:3000/coverage/issue/all
